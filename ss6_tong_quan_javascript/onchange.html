@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện onchange</title>
+</head>
+<body>
+<h1 style="color: hotpink">Chọn Pokemon yêu thích của bạn:</h1>
+<select onchange="changePokemon()" id="Pokemon" style="font-family: Calibri; font-size: 30px; font-style: italic; color: deepskyblue; ">
+    <option value="Pikachu">Pikachu</option>
+    <option value="Chamander">Chamander</option>
+    <option value="Bulbasaur">Bulbasaur</option>
+    <option value="Squirtle">Squirtle</option>
+</select>
+<script>
+    // function changePokemon() {
+        // var selectedValue = document.getElementById("Pokemon").value;
+        // alert(selectedValue);}
+
+    var selectPokemon = document.getElementById("Pokemon");
+    selectPokemon.addEventListener("change", alertPokemon);
+    function alertPokemon() {
+            var FavPoke = document.getElementById("Pokemon").value;
+            alert(FavPoke);
+    }
+
+</script>
+</body>
+</html>
