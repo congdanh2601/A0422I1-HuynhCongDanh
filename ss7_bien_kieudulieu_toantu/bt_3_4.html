@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chu vi Diện tích hình tròn</title>
+</head>
+<body>
+<h2>Enter diameter</h2>
+<input id="inputdiameter" onchange="calculatePS()"><br>
+<h2 id="result"></h2>
+<script>
+    function calculatePS() {
+        const pi = 3.14
+        let diameter = parseInt(document.getElementById("inputdiameter").value);
+        let perimeter = pi*diameter;
+        let stretch = (diameter/2)*(diameter/2)*pi;
+        document.getElementById("result").innerHTML=('Perimeter = '+perimeter+'<br>Stretch = '+stretch);
+    }
+</script>
+</body>
+</html>

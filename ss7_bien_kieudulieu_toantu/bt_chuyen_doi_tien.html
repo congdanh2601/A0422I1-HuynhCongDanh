@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table align="center">
+    <tr>
+        <th width="20%">Amount</th>
+        <th width="20%">From Currency</th>
+        <th width="20%">To Currency</th>
+    </tr>
+    <tr align="center">
+        <td><input id="inputAmount" type="number"></td>
+        <td>
+            <select id="fromCurrency">
+                <option>VND</option>
+                <option>USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="toCurrency">
+                <option>VND</option>
+                <option>USD</option>
+            </select>
+        </td>
+        <td width="20%"><button onclick="convert()"><strong>Convert</strong></button></td>
+    </tr>
+</table><br>
+<h2 align="center" id="announce"></h2>
+<script>
+    function convert() {
+        let amount = document.getElementById("inputAmount").value;
+        let from = document.getElementById("fromCurrency").value;
+        let to = document.getElementById("toCurrency").value;
+        if (from == to) {
+            document.getElementById("announce").innerHTML=(amount + ' '+from+' = '+amount+' '+to+'.');
+        }
+        else if (from=="VND") {
+            var ketqua = amount/23000;
+            document.getElementById("announce").innerHTML=(amount+' '+from+' = '+ketqua+' '+to+'.');
+        }
+        else if (from=="USD") {
+            var ketqua = amount*23000;
+            document.getElementById("announce").innerHTML=(amount +' '+from+' = '+ketqua+' '+to+'.');
+        }
+    }
+</script>
+</body>
+</html>

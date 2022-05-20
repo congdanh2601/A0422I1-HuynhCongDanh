@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<h2>Enter temperature in <sup>o</sup>C</h2>
+<input id="temC" onchange="transfer()"><br>
+<h2 id="result"></h2>
+<script>
+
+    function transfer() {
+        let celsius = parseInt(document.getElementById("temC").value);
+        let fahrenheit = celsius*9/5+32;
+        document.getElementById("result").innerHTML=(celsius + "<sup>o</sup>C = " + fahrenheit + "<sup>o</sup>F");
+    }
+</script>
+</body>
+</html>

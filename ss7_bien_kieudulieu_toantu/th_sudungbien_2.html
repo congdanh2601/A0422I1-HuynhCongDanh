@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<h5>Nhập chiều rộng: </h5>
+<input id="width">
+<br>
+<h5>Nhập chiều cao:</h5>
+<input id="height">
+<br><br>
+<button onclick="calculateArea()" id="button">Tính diện tích</button>
+<h2 id="result"></h2>
+<script>
+    function calculateArea() {
+        let a = document.getElementById("width").value;
+        let b = document.getElementById("height").value;
+        let area = a*b;
+        document.getElementById("result").innerHTML=('Diện tích hình chữ nhật bằng: ' + area)
+    };
+</script>
+</body>
+</html>
