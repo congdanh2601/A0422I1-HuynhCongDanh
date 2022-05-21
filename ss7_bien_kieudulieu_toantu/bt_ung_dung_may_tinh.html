@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<h2>Calculator</h2>
+<input id="firstValue">
+<input id="secondValue">
+<br><br>
+<button id="cong" onclick="tinhToan(this.id)">Addition(+)</button>
+<button id="tru" onclick="tinhToan(this.id)">Subtraction(-)</button>
+<button id="nhan" onclick="tinhToan(this.id)">Multiplication(x)</button>
+<button id="chia" onclick="tinhToan(this.id)">Division(/)</button>
+<br>
+<p id="result"></p>
+<script>
+    function tinhToan(ketqua) {
+        let firstValue=parseInt(document.getElementById("firstValue").value);
+        let secondValue=parseInt(document.getElementById("secondValue").value);
+        switch (ketqua) {
+            case ("cong"): {ketqua=firstValue+secondValue}; alert(ketqua); break;
+            case ("tru"): {ketqua=firstValue-secondValue}; alert(ketqua); break;
+            case ("nhan"): {ketqua=firstValue*secondValue}; alert(ketqua); break;
+            case ("chia"): {ketqua=firstValue/secondValue}; alert(ketqua); break;
+        }
+    }
+    // function add() {
+    //     firstValue=parseInt(document.getElementById("firstValue").value);
+    //     secondValue=parseInt(document.getElementById("secondValue").value);
+    //     let ketqua=firstValue+secondValue;
+    //     document.getElementById("result").innerHTML=("Result Addition: "+ketqua)
+    // }
+    // function sub() {
+    //     firstValue=document.getElementById("firstValue").value;
+    //     secondValue=document.getElementById("secondValue").value;
+    //     let ketqua=firstValue-secondValue;
+    //     document.getElementById("result").innerHTML=("Result Subtraction: "+ketqua)
+    // }
+    // function mul() {
+    //     firstValue=document.getElementById("firstValue").value;
+    //     secondValue=document.getElementById("secondValue").value;
+    //     let ketqua=firstValue*secondValue;
+    //     document.getElementById("result").innerHTML=("Result Multiplication: "+ketqua)
+    // }
+    // function div() {
+    //     firstValue=document.getElementById("firstValue").value;
+    //     secondValue=document.getElementById("secondValue").value;
+    //     let ketqua=firstValue/secondValue;
+    //     document.getElementById("result").innerHTML=("Result Division: "+ketqua)
+    // }
+</script>
+</body>
+</html>
