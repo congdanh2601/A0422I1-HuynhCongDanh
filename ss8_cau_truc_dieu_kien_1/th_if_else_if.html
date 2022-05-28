@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành if...else...if</title>
+</head>
+<body>
+<script>
+    let inputName;
+    inputName = prompt('Enter your name.');
+    if (inputName == 'Admin') {
+        let password =  prompt('Enter password');
+        if (password == 'TheMaster') alert('Welcome');
+        else if (password == null) alert('Canceled');
+        else alert('Wrong password');
+    }
+    else if (inputName == null) alert('canceled');
+    else alert("I don't know you");
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Events</title>
+</head>
+<body>
+<img id="leo" src="10.png" height=330px width=450px>
+<br>
+<p>Click buttons below to move the image</p>
+<button onclick="moveLeft()">Move left</button>
+<button onclick="moveRight()">Move right</button>
+<script>
+    let leo = document.getElementById("leo");
+    leo.style.position = 'relative';
+    leo.style.left = '10px';
+    function moveLeft() {
+        leo.style.left = parseInt(leo.style.left) - 10 + 'px';
+    }
+    function moveRight() {
+        leo.style.left = parseInt(leo.style.left) + 10 + 'px';
+    }
+</script>
+</body>
+</html>

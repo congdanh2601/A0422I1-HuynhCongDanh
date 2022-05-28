@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keyboard event</title>
+</head>
+<body>
+<img id="nobita" src="nobita.png" width="300" height="450" style="position:relative; left: 0; top: 0">
+<script>
+    window.addEventListener("keydown", moveDirection);
+    let imgNobita = document.getElementById('nobita');
+    function moveDirection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                imgNobita.style.left = parseInt(imgNobita.style.left) -15 +'px';
+                break;
+            case 38:
+                imgNobita.style.top = parseInt(imgNobita.style.top) - 15 + "px";
+                break;
+            case 39:
+                imgNobita.style.left = parseInt(imgNobita.style.left) + 15 + "px";
+                break
+            case 40:
+                imgNobita.style.top = parseInt(imgNobita.style.top) + 15 + "px";
+                break
+        }
+    }
+</script>
+</body>
+</html>
