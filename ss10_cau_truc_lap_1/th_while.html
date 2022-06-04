@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use while loop</title>
+</head>
+<body>
+<script>
+
+     let x = parseFloat(prompt("Enter a number"));
+     let total = 0;
+     let text = "";
+     do {
+         text += ' ' + x + ' + '; console.log(text);
+         total = eval(x + total);
+         x = parseFloat(prompt("Enter a number"));
+     } while (x != -1);
+     total = eval(x + total);
+     text += ' ' + x + ' = ' + total; console.log(text);
+     alert(text);
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 01</title>
+</head>
+<body>
+<script>
+
+    /*Bài 1
+    for (i=1; i <= 100; i++) {
+        document.write(i + '<br>');
+        if (i==99) {
+            alert('Finish');
+        }
+    }*/
+
+    /*Bài 2
+    let t = prompt('Enter temperature');
+    while (t > 100 || t < 20) {
+        if (t > 100) {
+            alert('Please lower temperature!');
+            t = prompt('Enter temperature');
+        }
+        if (t < 20) {
+            alert('Please raise temperature!');
+            t = prompt('Enter temperature');
+        }
+    }*/
+
+    /*Bài 3
+    let a = 0;
+    let b = 1;
+    let c;
+    let total = 1;
+    for (i = 0; i < 20; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+        document.write(i+1+'. '+c+'<br>');
+    }*/
+
+    /*Bài 4
+    let a = 0;
+    let b = 1;
+    let c;
+    if (a % 5 == 0) {
+        alert('The first Fibonacci number that divisible by 5 is '+a);
+    } else if (b % 5 == 0) {
+        alert('The first Fibonacci number that divisible by 5 is '+b);
+    } else {
+        while (c % 5 != 0) {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        alert('The first Fibonacci number that divisible by 5 is ' + c)
+    }*/
+
+    /*Bài 5
+    let a = 0;
+    let b = 1;
+    let c;
+    let total = 1;
+    for (i = 0; i < 18; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+        total = total + c;
+    }
+    alert('Total of the first 20 numbers of Fibonacci: '+total)*/
+
+    /*Bài 6
+    let i = 0;
+    let sum = 0;
+    let count = 0;
+    while (count < 30) {
+        if (i % 7 == 0) {
+            sum += i;
+            count += 1;
+        }
+        i++;
+    }
+    alert('Tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên là ' + sum);*/
+
+    /*Bài 7
+    for (i = 1; i <= 100; i++) {
+        if (i % 3 == 0) {
+            if (i % 5 == 0) {
+                document.write('FizzBuzz'+'<br>');
+            } else {
+                document.write('Fizz'+'<br>');
+        }
+
+        } else if (i % 5 == 0) {
+            document.write('Buzz'+'<br>');
+            } else {document.write(i+'<br>')}
+    }*/
+
+    /*Bài 8
+    document.write('<button onclick="play()">PAY 10$ TO PLAY</button>');
+    function play() {
+        let min = parseInt(prompt('You want to guess from number...?'));
+        let max = parseInt(prompt("To...? We'll pick a random number from your range"));
+        let jackpot = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log(jackpot);
+        for (i = 0; i < 3; i++) {
+            let guess = parseInt(prompt('Please guess the random number. You can guess up to 3 times'));
+            if (guess == jackpot) {
+                alert("Congratulation! Your guess is right. You've just won happiness");
+                break;
+            } else {
+                if (i==2) {alert("Sorry. Let's play another game")}
+                else alert("Sorry. Please try again")
+            }
+        }
+    }*/
+
+
+
+</script>
+</body>
+</html>

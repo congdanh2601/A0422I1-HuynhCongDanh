@@ -5,49 +5,45 @@
     <title>Máy tính đơn giản</title>
 </head>
 <body>
-    <table align="center" border="1">
+    <table align="center" border="2" style="border-color: black">
         <tr>
             <td height="48" colspan="4"><input id="monitor" style="color: blue" disabled></td>
         </tr>
-        <tr align="center">
+        <tr align="center" style="border-color: white">
             <td height="48"> <button onclick="hienThi(this.value)" value="1" >1</button></td>
             <td><button onclick="hienThi(this.value)" value="2" >2</button></td>
             <td><button onclick="hienThi(this.value)" value="3" >3</button></td>
             <td><button onclick="hienThi(this.value)" value="+" >+</button></td>
         </tr>
-        <tr align="center">
+        <tr align="center" style="border-color: white">
             <td height="48"> <button onclick="hienThi(this.value)" value="4" >4</button></td>
             <td><button onclick="hienThi(this.value)" value="5" >5</button></td>
             <td><button onclick="hienThi(this.value)" value="6" >6</button></td>
             <td><button onclick="hienThi(this.value)" value="-" >-</button></td>
         </tr>
-        <tr align="center">
+        <tr align="center" style="border-color: white">
             <td height="48"> <button onclick="hienThi(this.value)" value="7" >7</button></td>
             <td><button onclick="hienThi(this.value)" value="8" >8</button></td>
             <td><button onclick="hienThi(this.value)" value="9" >9</button></td>
             <td><button onclick="hienThi(this.value)" value="*" >x</button></td>
         </tr>
-        <tr align="center">
-            <td height="48"> <button onclick="xoa">C</button></td>
+        <tr align="center" style="border-color: white">
+            <td height="48"> <button onclick="xoa()">C</button></td>
             <td><button onclick="hienThi(this.value)" value="0" >0</button></td>
-            <td><button onclick="tinh" >=</button></td>
+            <td><button onclick="tinh()">=</button></td>
             <td><button onclick="hienThi(this.value)" value="/" >/</button></td>
         </tr>
     </table>
 <script>
     function hienThi(abc) {
-        switch (abc) {
-            case abc:
-                document.getElementById("monitor").value += abc
-        }
+       document.getElementById("monitor").value += abc
     }
     function tinh() {
-        let ketQua = eval(document.getElementById("monitor").value);
+        ketQua = eval(document.getElementById("monitor").value);
         document.getElementById("monitor").value = ketQua;
     }
     function xoa() {
         document.getElementById("monitor").value = ""
-
     }
 </script>
 </body>

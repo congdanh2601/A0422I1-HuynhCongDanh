@@ -16,7 +16,95 @@
         alert(cTem+' in Celcius is '+fTem+' in Fahrenheit')
     } */
 
-    let met = parseFloat(prompt(''))
+    /*Bài 2
+    let met = parseFloat(prompt('Enter a length in met'));
+    if (isNaN(met) || met <= 0) {
+        alert('Please enter a number bigger than 0!')
+    } else {
+        let ft = met * 3.2808;
+        alert(met + ' met = ' + ft + ' ft');
+    } */
+
+    /*Bài 3
+    let side = parseFloat(prompt('Enter length of a side of a square'));
+    if (isNaN(side) || (side <= 0)) {
+        alert('Please enter a number bigger than 0!')
+    } else {
+        let stretch = side * 4;
+        alert('Stretch of the square is ' + stretch);
+    }*/
+
+    /*Bài 4
+    let width = parseFloat(prompt('Enter width of a of a rectangle'));
+    let height = parseFloat(prompt('Enter height of a of a rectangle'));
+    if (isNaN(width) || isNaN(height) || width <= 0 || height <= 0) {
+        alert('Please enter numbers and bigger than 0!')
+    } else {
+        let stretch = width * height;
+        alert('Stretch of the rectangle is ' + stretch);
+    } */
+
+    /*Bài 5
+    let rightAngleSide1 = parseFloat(prompt('Enter length of right angle side 1'));
+    let rightAngleSide2 = parseFloat(prompt('Enter length of right angle side 2'));
+    if (isNaN(rightAngleSide1) || isNaN(rightAngleSide2) || rightAngleSide1 <= 0 || rightAngleSide2 <= 0) {
+        alert('Please enter numbers and bigger than 0!')
+    } else {
+        let stretch = rightAngleSide1 * rightAngleSide2 / 2;
+        alert('Stretch of the triangle is ' + stretch);
+    }*/
+
+    /*Bài 6
+    let a = parseFloat(prompt('Equation: ax + b = 0. Enter number a:'));
+    let b = parseFloat(prompt('Equation: ax + b = 0. Enter number b:'));
+    if (isNaN(a) || isNaN(b) || a == 0) {
+        alert('Please enter numbers and "a" must different from 0')
+    } else {
+        let x = -b / a;
+        alert('Equation: '+a+'x + '+b+' = 0.           x = '+x)
+    }*/
+
+    /*Bài 7
+    let a = parseFloat(prompt('Phương trình bậc 2: ax^2 + bx + c = 0. Nhập a khác 0'));
+    let b = parseFloat(prompt('Phương trình bậc 2: ax^2 + bx + c = 0. Nhập b'));
+    let c = parseFloat(prompt('Phương trình bậc 2: ax^2 + bx + c = 0. Nhập c'));
+    if (isNaN(a) || isNaN(b) || isNaN(c) || a == 0) {
+        alert('Please enter numbers and "a" must different from 0')
+    } else {
+        let delta = Math.pow(b, 2) - 4*a*c;
+        if (delta < 0) {
+            alert('Phương trình '+a+'x^2 +'+b+'x + '+c+' = 0 vô nghiệm')
+        } else if (delta == 0) {
+            let x = -b / 2 / a;
+            alert('Phương trình '+a+'x^2 +'+b+'x + '+c+' = 0 có nghiệm kép x1 = x2 = '+x)
+        } else {
+            let x1 = (-b + Math.sqrt(delta)) / 2 / a;
+            let x2 = (-b - Math.sqrt(delta)) / 2 / a;
+            alert('Phương trình '+a+'x^2 +'+b+'x + '+c+' = 0 có 2 nghiệm phân biệt: x1 = '+x1+', x2 = '+x2)
+        }
+    }*/
+
+    /*Bài 8
+    let age = parseInt(prompt('Enter age of a person'));
+    if (isNaN(age)) {
+         alert("You're not entering a number")
+    } else if (age <= 0 || age > 120) {
+        alert('The number you just entered is NOT an age of a person')
+    } else {
+        alert('The number you just entered is an age of a person')
+    }*/
+
+    /*Bài 9
+    let a = parseFloat(prompt('Enter number a'));
+    let b = parseFloat(prompt('Enter number b'));
+    let c = parseFloat(prompt('Enter number c'));
+    if (isNaN(a,b,c) || a<=0 || b<=0 || c<=0) {
+        alert('Please enter numbers and bigger than 0!')
+    } else if (a+b>c && b+c>a && a+c>b) {
+        alert(a+', '+b+', '+c+' are sides of a triangle')
+    } else {
+        alert(a+', '+b+', '+c+' are not sides of a triangle')
+    }*/
 </script>
 </body>
 </html>
