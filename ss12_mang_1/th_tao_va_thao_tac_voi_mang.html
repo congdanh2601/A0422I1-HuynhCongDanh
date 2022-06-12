@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và thao tác với mảng</title>
+</head>
+<body>
+<input type="text" id="inputElement" width="300px">
+<button onclick="addElement()">Add</button>
+<button onclick="displayElement()">Display</button>
+<hr>
+<p id="text"></p>
+<script>
+    let text = '';
+    let x = 0;
+    let array = [];
+    let inputElement;
+    function addElement() {
+        inputElement = document.getElementById('inputElement');
+        array[x] = document.getElementById('inputElement').value;
+        text += 'Element ' + x + ' = ' + inputElement.value + '<br>';
+        inputElement.value = '';
+        console.log(array);
+        x++;
+    }
+    function displayElement() {
+        document.getElementById('text').innerHTML = text;
+    }
+
+</script>
+
+</body>
+</html>

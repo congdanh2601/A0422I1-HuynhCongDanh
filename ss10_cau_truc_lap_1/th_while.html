@@ -7,18 +7,25 @@
 <body>
 <script>
 
-     let x = parseFloat(prompt("Enter a number"));
-     let total = 0;
-     let text = "";
-     do {
-         text += ' ' + x + ' + '; console.log(text);
-         total = eval(x + total);
-         x = parseFloat(prompt("Enter a number"));
-     } while (x != -1);
-     total = eval(x + total);
-     text += ' ' + x + ' = ' + total; console.log(text);
-     alert(text);
+    /*Bài 1
+    let x = parseFloat(prompt("Enter a number"));
+    let total = 0;
+    let text = "";
+    while (x != -1) {
+        total += x;
+        text += ' ' + x + ' + ';
+        x = parseFloat(prompt("Enter a number"))
+    }
+    text += ' ' + x + ' = ' + total;
+    total += x;
+    alert(text);*/
 
+    /*Bài 2*/
+    let i = 1;
+    while (i <= 100) {
+        document.write('<hr width="'+i+'"%>');
+        i++;
+    }
 
 
 </script>

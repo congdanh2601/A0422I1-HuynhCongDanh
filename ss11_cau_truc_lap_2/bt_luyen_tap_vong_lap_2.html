@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop Practice 2</title>
+</head>
+<body>
+<script>
+
+    /*Bài 1
+    let a = 0;
+    let b = 1;
+    let c;
+    let total = 1;
+    document.write(a+'<br>'+b+'<br>');
+    for (i = 0; i < 30; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+        document.write(c + '<br>');
+    }*/
+
+    /*Bài 2
+    let n = parseInt(prompt("Enter a number bigger than 0"));
+    let i;
+    let factorial = 1
+    if (isNaN(n) || (n <= 0)) {
+        alert('Please enter a number AND bigger than 0')
+    } else {
+        for (i = 1; i <=n; i++) {
+            factorial = factorial * i
+        }
+        alert('Factorial of '+n+' is '+factorial)
+    }*/
+
+    /*Bài 3.1
+    for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= 5; j++) {
+            document.write('*');
+            if (i == j) {
+                document.write('<br>');
+                break;
+            }
+        }
+    }*/
+
+    /*Bài 3.2
+    for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= 5; j++) {
+            document.write('*');
+            if (i == 6 - j) {
+                document.write('<br>');
+                break;
+            }
+        }
+    }*/
+
+    /*Bài 3.3
+    for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= 5; j++) {
+            if (j >= 6 - i) {
+                document.write('*');
+            } else {
+                document.write('&nbsp&nbsp');
+            }
+        }
+        document.write('<br>')
+    }*/
+
+    /*Bài 3.4
+    for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= 5; j++) {
+            if (j >= i) {
+                document.write('*');
+            } else {
+                document.write('&nbsp&nbsp');
+            }
+        }
+        document.write('<br>')
+    }*/
+
+    /*Bài 4
+    for (i = 1; i <= 7; i++) {
+        for (j = 1; j <= 21; j++) {
+            if (i == 1 || i == 7) {
+                document.write('*');
+                continue;
+            }
+            if (j == 1 || j == 21) {
+                document.write('*');
+                continue;
+            }
+            document.write('&nbsp&nbsp');
+        }
+        document.write('<br>')
+    }*/
+
+    /*Bài 5
+    let tienVay = parseInt(prompt('Nhập số tiền bạn muốn vay'));
+    let thangVay = parseInt(prompt('Nhập thời gian vay (tháng)'));
+    let laiSuat = parseInt(prompt('Nhập lãi suất hàng tháng (%)'));
+    let laiThang, tienPhaiTra;
+    for (i = 0; i < thangVay; i++) {
+        laiThang = tienVay * laiSuat / 100;
+        tienVay = tienVay + laiThang;
+    }
+    alert('Tổng số tiền bạn phải trả sau '+thangVay+' tháng vay là '+tienVay)*/
+
+    /*Bài 6
+    for (i = 1; i < 3; i++) {
+        for (j = 1; j < 6; j++) {
+            if ((i + j) % 2 == 0) {
+                document.write('&nbsp&nbsp&nbsp&nbsp')
+            } else document.write('*&nbsp&nbsp')
+        }
+        document.write('<br>')
+    }
+    for (i = 3; i < 6; i++) {
+        for (j = 1; j < 6; j++) {
+            if (i - j == 2 || i + j == 8) {
+                document.write('*&nbsp&nbsp')
+            } else document.write('&nbsp&nbsp&nbsp&nbsp')
+        }
+        document.write('<br>')
+    }*/
+
+</script>
+</body>
+</html>

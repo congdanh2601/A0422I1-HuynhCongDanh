@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Practice 01</title>
+</head>
+<body>
+<script>
+
+    /*Bài 1
+    let soNguyen = [];
+    let count = 0;
+    let text ='';
+    for (i = 0; i < 10; i++) {
+        soNguyen[i] = parseInt(prompt('Nhập số nguyên thứ '+(i+1)));
+        if (soNguyen[i] >= 10) {
+            text += soNguyen[i] + ' '
+            count++;
+        }
+    }
+    alert('Trong chuỗi bạn nhập có '+count+' số nguyên lớn hơn hoặc bằng 10: '+text)*/
+
+    /*Bài 2
+    let soNguyen = [];
+    let max = 0;
+    let index;
+    for (i = 0; i < 10; i++) {
+        soNguyen[i] = parseInt(prompt('Nhập số nguyên thứ ' + (i + 1)));
+        for (j = 0; j < i; j++) {
+        while (soNguyen[j] == soNguyen[i]) {
+            j = 0;
+            soNguyen[i] = parseInt(prompt('Bạn vừa nhập số trùng lặp, vui lòng nhập lại số nguyên thứ ' + (i + 1)));
+        }
+    }
+    if (soNguyen[i] > max) {
+        max = soNguyen[i];
+        index = i;
+    }
+    }
+    alert('Số nguyên lớn nhất trong dãy là ' + max + ' nằm ở vị trí ' + (index+1))*/
+
+    /*Bài 3
+    let soNguyen = [];
+    let max = 0;
+    let index;
+    let sum = 0;
+    let average;
+    let numberOfElements = parseInt(prompt('Số phần tử bạn muốn nhập'))
+    for (i = 0; i < numberOfElements; i++) {
+        soNguyen[i] = parseInt(prompt('Nhập số nguyên thứ ' + (i + 1)));
+        sum += soNguyen[i];
+        if (soNguyen[i] > max) {
+            max = soNguyen[i];
+            index = i;
+        }
+    }
+    average = sum / numberOfElements;
+    alert('Số nguyên lớn nhất trong dãy là ' + max + ' nằm ở vị trí ' + (index+1));
+    alert('Trung bình cộng các phần tử trong mảng là '+average)*/
+
+    /*Bài 4
+    let soNguyen = [];
+    let numberOfElements = parseInt(prompt('Số phần tử bạn muốn nhập'))
+    for (i = 0; i < numberOfElements; i++) {
+        soNguyen[i] = parseInt(prompt('Nhập số nguyên thứ ' + (i + 1)));
+    }
+    alert(soNguyen.reverse())*/
+
+    /*Bài 5
+    let soNguyen = [];
+    let count = 0;
+    let numberOfElements = parseInt(prompt('Số phần tử bạn muốn nhập'))
+    for (i = 0; i < numberOfElements; i++) {
+        soNguyen[i] = parseInt(prompt('Nhập số nguyên thứ ' + (i + 1)));
+        if (soNguyen[i] < 0) {
+            count++;
+        }
+    }
+    alert(count)*/
+
+    /*Bài 6
+    let soNguyen = [];
+    for (i = 0; i < 10; i++) {
+        soNguyen[i] = parseInt(prompt('Nhập số nguyên thứ ' + (i + 1)));
+    }
+    let V = parseInt(prompt('Nhập số nguyên V'));
+    i = 0;
+    while (V != soNguyen[i]) {
+        i++;
+        if (i == 10) break
+    }
+    if (i < 10) alert(V + ' thuộc dãy số nguyên')
+    else alert(V + ' không thuộc dãy số nguyên')*/
+
+    /*Bài 7*/
+    let soNguyen = [];
+    for (i = 0; i < 10; i++) {
+        soNguyen[i] = parseInt(prompt('Nhập số nguyên thứ ' + (i + 1)));
+    }
+    let V = parseInt(prompt('Nhập số nguyên V'));
+    i = 0;
+    while (V != soNguyen[i]) {
+        i++;
+        if (i == 10) break
+    }
+    if (i < 10) {
+        soNguyen.splice(i,1);
+        soNguyen.push(0)
+    }
+    alert(soNguyen)
+
+    /*Bài 8*/
+    let soNguyen = [];
+    for (i = 0; i < 10; i++) {
+        soNguyen[i] = parseInt(prompt('Nhập số nguyên thứ '+(i+1)));
+    }
+
+</script>
+</body>
+</html>

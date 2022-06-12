@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+    let numberOfPrime = parseInt(prompt('Nhập số số nguyên tố đầu tiên bạn muốn hiển thị'));
+    let count = 0;
+    let i;
+    let j;
+    for (i = 2; count < numberOfPrime; i++) {
+        j = 2;
+        while (i % j != 0) {
+            j++;
+        }
+        if (j == i) {
+            document.write(i + '<br>');
+            count++;
+        }
+    }
+</script>
+</body>
+</html>
