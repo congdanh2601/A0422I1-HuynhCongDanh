@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<script>
+    let english = ['Hello', 'Hi', 'Good bye'];
+    let vietnamese = ['Chào nhé', 'cHào nhé', 'chÀo nhé'];
+    let inputEng = prompt('Nhập từ tiếng Anh để tra nghĩa')
+    let outputVietnam = '';
+    if (english.indexOf(inputEng) !== -1) {
+        outputVietnam += vietnamese[english.indexOf(inputEng)];
+    }
+    else {
+        outputVietnam += 'Không tìm thấy từ'
+    }
+    alert(outputVietnam)
+</script>
+</body>
+</html>

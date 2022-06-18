@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+<p id="caro"></p> <br>
+<button onclick="changeValue()">Change Value</button>
+<script>
+    let n = parseInt(prompt("Nhập số dòng"));
+    let m = parseInt(prompt("Nhập số cột"));
+    let caro = '';
+    let x = [];
+    let player = true;
+    for (i = 0; i < n; i++) {
+        x[i] = [];
+        for (j = 0; j < m; j++) {
+            x[i][j] = '.';
+            caro += x[i][j] + '&nbsp&nbsp&nbsp';
+        }
+        caro += '<br>';
+    }
+    console.log(x);
+    document.getElementById('caro').innerHTML = caro;
+
+    function changeValue() {
+        let toaDoCot = parseInt(prompt("Nhập vị trí muốn thay đổi giá trị (cột)"));
+        let toaDoHang = parseInt(prompt("Nhập vị trí muốn thay đổi giá trị (hàng)"));
+        if (player == true) {
+            x[toaDoHang - 1][toaDoCot - 1] = 'x';
+            player = false;
+        } else {
+            x[toaDoHang - 1][toaDoCot - 1] = '0';
+            player = true;
+        }
+        console.log(x);
+        caro = '';
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < m; j++) {
+                caro += x[i][j] + '&nbsp&nbsp&nbsp';
+            }
+            caro += '<br>';
+        }
+        document.getElementById('caro').innerHTML = caro;
+    }
+</script>
+</body>
+</html>

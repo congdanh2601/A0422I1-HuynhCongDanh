@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Manager</title>
+</head>
+<body>
+<h1>Product Manager</h1>
+<h3>Add New Product</h3>
+<input type="text" id="newProduct" placeholder="New Product">
+<button onclick="addProduct(document.getElementById('newProduct').value)">Add</button><br>
+<h3>Display All Product</h3>
+<button onclick="showProducts()">Show list of Products</button><br><br>
+<div id="firstRow"></div>
+<div id="products"></div>
+<script>
+    let products = ['Phone', 'Laptop', 'Tablet', 'Speaker', 'Keyboard'];
+    document.getElementById('firstRow').innerHTML = ('<table style="border: solid; border-collapse: collapse" border="1">' +
+        '<tr>' +
+        '<th width="50">No.</th>' +
+        '<th width="200">Product Name</th>' +
+        '<th width="260"></th>' +
+        '</tr></table>')
+
+    document.getElementById('products').innerHTML = ('<table>')
+    for (i = 0; i < products.length; i++) {
+        document.getElementById('products').innerHTML = (
+            '<tr id="row'+i+'">' +
+            '<td align="center" width="50">' + (i+1) + '</td>' +
+            '<td align="center" width="200">' + products[i] + '</td>' +
+            '<td align="center" width="260"><button onclick="editProduct()">Edit</button>' +
+            '<span>&nbsp&nbsp&nbsp&nbsp&nbsp</span>' +
+            '<button onclick="deleteProduct()">Delete</button></td>' +
+            '</tr>'
+        )
+    }
+    document.getElementById('products') ('</table>')
+
+</script>
+</body>
+</html>

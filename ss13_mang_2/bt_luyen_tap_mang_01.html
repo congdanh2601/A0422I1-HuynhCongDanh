@@ -92,7 +92,7 @@
     if (i < 10) alert(V + ' thuộc dãy số nguyên')
     else alert(V + ' không thuộc dãy số nguyên')*/
 
-    /*Bài 7*/
+    /*Bài 7
     let soNguyen = [];
     for (i = 0; i < 10; i++) {
         soNguyen[i] = parseInt(prompt('Nhập số nguyên thứ ' + (i + 1)));
@@ -107,13 +107,20 @@
         soNguyen.splice(i,1);
         soNguyen.push(0)
     }
-    alert(soNguyen)
+    alert(soNguyen)*/
 
-    /*Bài 8*/
-    let soNguyen = [];
+    /*Bài 8
+    let soNguyen = [1, 5, 6, 7, 4, 9, 36, 49, 79, 81];
     for (i = 0; i < 10; i++) {
-        soNguyen[i] = parseInt(prompt('Nhập số nguyên thứ '+(i+1)));
+        for (j = i + 1; j < 10; j++) {
+            if (soNguyen[i] < soNguyen[j]) {
+                let temp = soNguyen[i];
+                soNguyen[i] = soNguyen[j];
+                soNguyen[j] = temp;
+            }
+        }
     }
+    document.writeln(soNguyen)*/
 
 </script>
 </body>

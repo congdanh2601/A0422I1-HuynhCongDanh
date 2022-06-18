@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Practice 2</title>
+</head>
+<body>
+<script>
+
+    /*Bài 1
+    function calSquare(inputNumber) {
+        inputNumber = parseFloat(prompt('Type a number to know its square'));
+        if (isNaN(inputNumber)) {
+            alert('Please type a NUMBER!');
+            inputNumber = parseFloat(prompt('Type a number to know its square'));
+        } else {
+            result = inputNumber * inputNumber;
+            alert(result);
+        }
+    }
+    calSquare();*/
+
+    /*Bài 2
+    function calArea(r) {
+        r = parseFloat(prompt('Type radius (r)'));
+        if (isNaN(r)) {
+            alert('Please type a NUMBER bigger than 0');
+            r = parseFloat(prompt('Type radius (r)'));
+        } else {
+        area = r * r * 3.14;
+        alert(area);
+        }
+    }
+    
+    function calPerimeter(r) {
+        r = parseFloat(prompt('Type radius (r)'));
+        if (isNaN(r)) {
+            alert('Please type a NUMBER bigger than 0');
+            r = parseFloat(prompt('Type radius (r)'));
+        } else {
+            perimeter = r * 2 * 3.14;
+            alert(perimeter);
+        }
+    }
+
+    document.writeln('<button onclick="calArea()">Calculate area</button>')
+    document.writeln('<button onclick="calPerimeter()">Calculate perimeter</button>')*/
+
+    /*Bài 3
+    document.writeln('<button onclick="calFactorial()">Calculate factorial</button>')
+
+    function calFactorial() {
+        let factorial = 1;
+        let inputNumber = parseFloat(prompt('Type a number to calculate factorial'));
+        for (i = 1; i <= inputNumber; i++) {
+            factorial *= i;
+        }
+        alert(factorial)
+    }*/
+
+    /*Bài 4
+    document.writeln('<button onclick="checkNum()">Check number</button>');
+    function checkNum() {
+        let input = prompt('Type anything to check if it a number or not');
+        if (isNaN(input)) {
+            alert(false)
+        } else alert((true))
+    }*/
+
+    /*Bài 5
+    document.writeln('<button onclick="findMin()">Find the minimum among 3 integers</button>');
+    function findMin() {
+        let numbers = []
+        numbers[0] = parseInt(prompt('Enter first number'));
+        numbers[1] = parseInt(prompt('Enter second number'));
+        numbers[2] = parseInt(prompt('Enter third number'));
+        let min = numbers[0]
+        for (i = 0; i < 3; i++) {
+            if (numbers[i] < min) {
+                min = numbers[i];
+            }
+        }
+        alert(min)
+    }*/
+
+    /*Bài 6
+    document.writeln('<button onclick="checkPositiveInt()">Check if the input is a positive integer</button>');
+
+    function checkPositiveInt() {
+        let input = prompt('Type anything to check if it a positive integer or not');
+        if (isNaN(input)) {
+            alert(false)
+        } else {
+            let checkInput = parseInt(input);
+            if ((input - checkInput) != 0) {
+                alert(false)
+            } else {
+                if (input > 0) {
+                    alert(true)
+                } else {alert(false)}
+            }
+        }
+    }*/
+
+    /*Bài 7
+    document.writeln('<button onclick="swapNum()">Type 2 integers and swap positions</button>');
+    function swapNum() {
+        let num1 = parseInt(prompt('Type first number'));
+        let num2 = parseInt(prompt('Type second number'));
+        let swap = num1;
+        num1 = num2;
+        num2 = swap;
+        alert('First number: ' + num1 + ", second number: " + num2)
+    }*/
+
+    /*Bài 8
+    let array = [8, 4, -12, 16, 31, 89];
+    document.writeln(array.join(', ') + '<br>');
+    console.log(array);
+    document.writeln('<button onclick="reverseArray()">Reverse array</button>');
+    function reverseArray() {
+        array.reverse()
+        document.writeln(array.join(', '));
+    }*/
+
+    /*Bài 9
+    document.writeln('<button onclick="checkPresence()">Check presence of a character in an array</button>');
+    function checkPresence() {
+        let array = ['a', 'b', 'c', 'd', 'e', 'a', '1', 2, 3, 1];
+        let character = prompt('Type a character');
+        let count = 0;
+        for (i = 0; i < array.length; i++) {
+            if (character == array[i]) {
+                count++
+            }
+        }
+        if (count > 0) {
+            alert(count)
+        } else alert(-1)
+    }*/
+
+
+</script>
+</body>
+</html>

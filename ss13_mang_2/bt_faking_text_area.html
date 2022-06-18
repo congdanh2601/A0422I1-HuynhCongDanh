@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea on Typing</title>
+</head>
+<body>
+<h1>Type anything slowly</h1>
+<textarea id="fakeTextarea"></textarea>
+<script>
+    window.addEventListener("onkeyup", typeDefault());
+    let defaultText = ['Xin chào bạn'];
+    let i = 0;
+    let text ='';
+    function typeDefault() {
+        text += defaultText[i];
+        document.getElementById('fakeTextarea').value = text;
+        i++;
+    }
+</script>
+</body>
+</html>
