@@ -61,9 +61,75 @@
     }*/
 
     /*YÊU CẦU 2
-    Bài 1*/
-    
+    Bài 1
+    let grossIncome = parseFloat(prompt('Enter your salary'));
+    let tax = 0;
+    let netIncome = 0;
+    if (isNaN(grossIncome) || grossIncome < 0) {
+        alert('Please type a positive number')
+    } else if (grossIncome >= 15000000) {
+        tax = grossIncome * 0.2;
+    } else if (grossIncome >= 7000000) {
+        tax = grossIncome * 0.1
+    } else {
+        tax = grossIncome * 0.05
+    }
+    netIncome = grossIncome - tax;
+    document.write('Gross income: ' + grossIncome + '<br>' +
+        'Tax: ' + tax + '<br>' +
+        'Net income: ' + netIncome)*/
 
+    /*Bài 2
+    let lower = ['u', 'e', 'o', 'a', 'i'];
+    let upper = ['U', 'E', 'O', 'A', 'I'];
+    let char = prompt('Type a character to check if it is vowel or consonant');
+    let check = lower.indexOf(char) + upper.indexOf(char);
+    if (check >= 0) {
+        alert('The character is a vowel')
+    } else alert('The character is a consonant')*/
+
+    /*YÊU CẦU 3
+    Bài 1
+    let n = parseInt(prompt('Type number of elements'));
+    let a = [1], b = [1], c = 1;
+    for (i = 1; i < n; i++) {
+        a[i] = i + 1;
+        c += a[i];
+        b[i] = c;
+    }
+    document.write(b);*/
+
+    /*Bài 2
+    let A = [1,2,6,4,8,3,8,0,-1];
+    let B = [4,6,8,6,2,12,35,456,2,-1,-2];
+    let C = []
+    for (i = 0; i < B.length; i++) {
+        if (A.indexOf(B[i]) == -1 && C.indexOf(B[i]) == -1) {
+            C.push(B[i])
+        }
+    }
+    document.write(C.sort());*/
+
+    /*Bài 3
+    let numerators = [2, 6, 9, -5];
+    let denominators = [4, 23, 5, -1];
+    let index = 0, max = numerators[0] / denominators[0];
+    for (i = 0; i < numerators.length; i++) {
+        let fraction = numerators[i] / denominators[i];
+        if (fraction > max) {
+            max = fraction;
+            index = i;
+        }
+    }
+    document.write('The biggest fraction is ' +
+        numerators[index] + '/' + denominators[index] +
+        ' at position ' + index)*/
+
+    /*Bài 4*/
+    let number = prompt('Enter a number');
+    let numbers = [1,2,3,4,5,6,7,8,9,0];
+    let text = ['Một','Hai','Ba','Bốn','Năm','Sáu','Bảy','Tám','Chín','Không'];
+    
 </script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<p id="text1"></p>
+<p id="text2"></p>
+<script>
+    class Temperature {
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+        convertCToF() {
+            this.fahrenheit = 9 / 5 * this.celsius +32;
+            document.getElementById('text1').innerHTML = ('Fahrenheit = '+this.fahrenheit)
+        }
+        convertCToK() {
+            this.kenvin = 273.15 + this.celsius;
+            document.getElementById('text2').innerHTML = ('Kenvin = '+this.kenvin)
+        }
+    }
+    let tem1 = new Temperature(25);
+    tem1.convertCToF();
+    tem1.convertCToK()
+</script>
+</body>
+</html>

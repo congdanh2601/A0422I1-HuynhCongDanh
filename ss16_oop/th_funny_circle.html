@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funny Circle</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="1000"></canvas>
+<script>
+    class Circle {
+        constructor(x, y, r) {
+            this.x = x;
+            this.y = y;
+            this.r = r;
+        }
+
+        drawCircle() {
+            let ctx = document.getElementById('myCanvas').getContext('2d');
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+
+        drawRandom() {
+            this.r = Math.floor(Math.random() * 80);
+            this.ctx = document.getElementById('myCanvas').getContext('2d');
+            this.ctx.beginPath();
+            this.ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+            this.ctx.stroke();
+        }
+
+        drawColor() {
+            this.r = Math.floor(Math.random() * 80);
+
+            function getRandomHex() {
+                return Math.floor(Math.random() * 255);
+            }
+
+            function getRandomColor() {
+                let red = getRandomHex();
+                let green = getRandomHex();
+                let blue = getRandomHex();
+                return "rgb(" + red + "," + green + "," + blue + ")";
+            }
+
+            let color = getRandomColor();
+            this.ctx = document.getElementById('myCanvas').getContext('2d');
+            this.ctx.beginPath();
+            this.ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+            this.ctx.fillStyle = color;
+            this.ctx.fill();
+        }
+
+        drawRandomPosition() {
+            this.x = Math.random() * window.innerWidth;
+            this.y = Math.random() * window.innerHeight;
+            this.ctx.beginPath();
+            this.ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+            this.ctx.stroke();
+        }
+    }
+
+    let circle1 = new Circle(300, 300, 50);
+    circle1.drawCircle();
+    circle1.drawRandom();
+    circle1.drawColor();
+    circle1.drawRandomPosition()
+</script>
+</body>
+</html>

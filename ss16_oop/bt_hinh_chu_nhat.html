@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="rectangle" width="500" height="500" style="border: 1px solid #d3d3d3"></canvas>
+<p id="text"></p>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        calArea() {
+            this.area = this.width * this.height
+        }
+
+        calParameter() {
+            this.parameter =  2*this.width + 2*this.height
+        }
+        showRectangle() {
+            let ctx = document.getElementById('rectangle').getContext('2d');
+            ctx.moveTo(0, 0);
+            ctx.lineTo(this.width, 0);
+            ctx.lineTo(this.width, this.height);
+            ctx.lineTo(0, this.height);
+            ctx.lineTo(0, 0);
+            ctx.stroke();
+        }
+    }
+
+    let rec1 = new Rectangle(200, 150);
+    rec1.showRectangle();
+    rec1.width = 500;
+    rec1.height = 450;
+    rec1.calArea();
+    rec1.calParameter();
+    document.getElementById('text').innerHTML = ('Area of the rectangle with 500 width, 450 height is '+rec1.area+' and parameter is '+rec1.parameter);
+</script>
+</body>
+</html>
