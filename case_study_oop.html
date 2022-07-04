@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP</title>
+</head>
+<body>
+<h1>Xổ số CodeGym</h1>
+<p id="ticket"></p>
+<p id="luckyNumber"></p>
+<br>
+<button id="buyTicket" onclick="buyTicket()">Mua vé</button>
+<button id="seeResult" onclick="seeResult()">Xem kết quả</button>
+<p id="numbersToChoose"></p>
+<script>
+    function buyTicket() {
+        let choose = prompt('Bạn có 2 lựa chọn: \n' +
+            '1. Bạn muốn tự chọn số.\n' +
+            '2. Hệ thống tự random.')
+        if (choose == 1) {
+            let a = 1;
+            document.getElementById("numbersToChoose").innerHTML = ('Mời bạn chọn 6 con số <br>');
+            for (i = 0; i < 10; i++) {
+                for (j = 0; j < 10; j++) {
+                    if (a < 10) a = '0' + a;
+                    // document.getElementById("numbersToChoose").innerHTML = ('<button onclick="disableButton(this.id)" id="' + a + '">' + a + '</button>')
+                    a++;
+                }
+                document.write('<br>')
+            }
+        }
+    }
+
+    class Ticket {
+        constructor(id, type, value) {
+            this.id = id;
+            this.type = type;
+            this.value = value;
+        }
+
+    }
+</script>
+</body>
+</html>

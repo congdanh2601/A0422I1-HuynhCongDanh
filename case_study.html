@@ -125,11 +125,200 @@
         numerators[index] + '/' + denominators[index] +
         ' at position ' + index)*/
 
-    /*Bài 4*/
+    /*Bài 4
     let number = prompt('Enter a number');
-    let numbers = [1,2,3,4,5,6,7,8,9,0];
+    let numbers = ['1','2','3','4','5','6','7','8','9','0'];
     let text = ['Một','Hai','Ba','Bốn','Năm','Sáu','Bảy','Tám','Chín','Không'];
-    
+    let output = '';
+    for (i in number) {
+        let index = numbers.indexOf(number[i]);
+        output += text[index] + ' '
+    }
+    alert(output)*/
+
+    /*Bài 5
+    let drinks = ['Cafe', 'Cam vắt', 'Nước ép cà rốt', 'Nước ép cà chua', 'Nước lọc', 'Nước dừa', 'Thanh toán'];
+    let prices = [15000, 20000, 18000, 17000, 8000, 15000];
+    let totalMoney = 0
+    document.write('<table>' +
+        '<tr>' +
+        '<th>No.</th>' +
+        '<th>Drinks</th>' +
+        '<th></th>' +
+        '</tr>')
+    for (i = 1; i < 8; i++) {
+        document.write('<tr>' +
+            '<td align="center">'+i+'</td>' +
+            '<td>'+drinks[i-1]+'</td>' +
+            '<td align="center"><button onclick="selectDrink('+(i-1)+')">Select</button></td>' +
+            '</tr>')
+    }
+    function selectDrink(i) {
+        if (i < 6) {
+            let number = parseInt(prompt('Đơn giá: ' + prices[i] + '. Vui lòng chọn số lượng: '))
+            totalMoney += prices[i] * number;
+        } else {
+            alert('Tổng tiền bạn phải trả là '+ totalMoney);
+            totalMoney = 0;
+        }
+    }*/
+
+    /*YÊU CẦU 4
+    Bài 1
+    function vietHoachudau(inputText) {
+        document.write(inputText + '<br>')
+        inputText = inputText.toLowerCase();
+        let outputText = '';
+        let words = inputText.split(' ');
+        for (i = 0; i < words.length; i++) {
+            if (words[i] == '') {
+                words.splice(i, 1);
+                i--;
+            }
+        }
+        for (i = 0; i < words.length; i++) {
+            outputText += words[i].charAt(0).toUpperCase() + words[i].slice(1) + ' '
+        }
+        document.write(outputText + '<br>')
+    }
+     vietHoachudau('hUỳNh    côNg dAnh');
+
+    function timTuDaiNhat(inputText) {
+        let words = inputText.split(' ');
+        let index = 0;
+        for (i = 0; i < words.length; i++) {
+            if (words[i] == '') {
+                words.splice(i, 1);
+                i--;
+            }
+            let max = 0;
+            for (j in words) {
+                if(words[j].length > max) {
+                    max = words[j].length;
+                    index = j
+                }
+            }
+        }
+        document.write('Từ dài nhất là ' + words[index] + ' ở vị trí ' + index +'<br>')
+    }
+    timTuDaiNhat('a ba abc abcd abcde abce');
+
+    function main() {
+        let inputText = prompt('Type something');
+        vietHoachudau(inputText);
+        timTuDaiNhat(inputText)
+    }
+    main()*/
+
+    /*Bài 2
+    let a = 'abcba';
+    let b = ''
+    for (i = 0; i < a.length; i++) {
+        if (b.indexOf(a[i]) == -1) {
+            b += a[i]
+        }
+    }
+    console.log(b)
+    document.write('Có '+b.length+' ký tự khác nhau: ');
+    for (i=0; i < b.length; i++) {
+        document.write(b[i] + '. ')
+    }*/
+
+    /*Bài 3
+    let s1 = 'aabcce', s2 = 'adcaacde';
+    let commonChar = '';
+    let count = 0;
+    for (i = 0; i < s1.length; i++) {
+        let index2 = s2.indexOf(s1[i])
+        if (index2 != -1) {
+            commonChar += s1[i] + '. ';
+            s1 = s1.substr(0, i) + s1.substr(i+1);
+            s2 = s2.substr(0, index2) + s2.substr(index2+1);
+            count++; i--;
+
+        }
+    }
+    alert('Có '+count+' ký tự chung: '+ commonChar)*/
+
+    /*YÊU CẦU 5 Mảng 2 chiều
+    Bài 1
+    let m = parseInt(prompt('Type numbers of rows'));
+    let n = parseInt(prompt('Type numbers of Column'));
+    let a = '1', sum = 0;
+
+    function calSumOfEven() {
+        for (i = 0; i < m; i++) {
+            for (j = 0; j < n; j++) {
+                document.write(a + '&nbsp&nbsp');
+                if (a % 2 == 0) {
+                    sum += a;
+                }
+                a++
+            }
+            document.write('<br>')
+        }
+        document.write('Total of even numbers in the matrix: ' + sum)
+    }
+
+    calSumOfEven()*/
+
+    /*Bài 2
+    let m = parseInt(prompt('Type numbers of rows'));
+    let n = parseInt(prompt('Type numbers of Column'));
+    let a = 1, primes = [];
+
+    function findPrime() {
+        for (i = 0; i < m; i++) {
+            for (j = 0; j < n; j++) {
+                document.write(a + '&nbsp&nbsp');
+
+                a++;
+            }
+            document.write('<br>')
+        }
+        for (x = 2; x < a; x++) {
+            let y = 2;
+            while (x % y != 0) {
+                y++
+            }
+            if (y == x) {
+                primes.push(x)
+            }
+        }
+        document.write('There are(is) ' + primes.length + ' Primes in the matrix: ' + primes.join(', '))
+    }
+
+    findPrime()*/
+
+    /*YÊU CẦU 6 OOP*/
+    document.write('<button onclick="tuChonSo()">Tự chọn số</button>');
+    document.write('<button onclick="ngauNhienSo()">Số ngẫu nhiên</button><br>');
+    let count = 0;
+
+    function tuChonSo() {
+        let a = 1;
+        document.write('Mời bạn chọn 6 con số <br>');
+        for (i = 0; i < 10; i++) {
+            for (j = 0; j < 10; j++) {
+                if (a < 10) a = '0' + a;
+                document.write('<button onclick="disableButton(this.id), getComputedStyle(this.id)" id="' + a + '">' + a + '</button>');
+                a++;
+            }
+            document.write('<br>')
+        }
+
+    }
+
+    function disableButton(id) {
+        document.getElementById(id).disabled = 'true';
+        count++;
+    }
+
+    function getSelectedNumbers(id) {
+        if (id < 10) id = '0' + id;
+        document.write('<button>' + id + '</button>');
+    }
+
 </script>
 </body>
 </html>
